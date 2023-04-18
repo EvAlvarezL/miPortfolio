@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <link href="{% static '/css/nav.css' %}" rel="stylesheet" />
+    <h1 class="title">{{title}}</h1>
+
+    <div class="contenedorFormulario">
+
+        {% if "valido" in request.GET %}
+            <p>Se ha enviado correctamente</p>
+        {% endif %}
+
+        <form action="" method="POST" class="miFormulario">
+            {% csrf_token %}
+            <table class="tableForm">{{miFormulario.as_table}}</table>
+            <input type="submit" value="Enviar" class="button">
+
+        </form>
+    </div>
+
+{% endblock %}

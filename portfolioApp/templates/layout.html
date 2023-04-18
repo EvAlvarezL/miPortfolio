@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
+     
+    <!-- Styles -->
+
+    <link href="{% static '/css/styl.css' %}" rel="stylesheet" />
+
+    <title>
+        {% block title %}
+        
+        {% endblock %}
+        | EvaAlv
+    </title>
+
+</head>
+
+<body>
+
+    <!-- Cabecera de la página -->
+    <header>
+        <div id="logotipo">
+            <!-- Logo de Django -->
+            <img src="{% static '/img/logo1.png' %}" />
+        </div>
+
+    </header>
+
+    <div id="content">
+
+        <nav>
+            <div class="nav-content">
+                <div class="toggle-btn">
+                    <i class='bx bx-plus'>EA</i>
+                </div>
+                <ul>
+                    <li style="--i:1;"> 
+                        <i class="nav-item {% if request.path == '/' %}active{% endif %}"></i>
+                        <a class="nav-link" onmouseenter="evento()" onmouseleave="evento1()" href="{% url 'index' %}"><img src="/static/img/casa.png" alt=""></a>
+                    </li>
+                    <li style="--i:2;">
+                        <i class="nav-item1 {% if request.path == '/habilidades/' %}active{% endif %}"></i>
+                        <a class="nav-link1" onmouseenter="evento2()" onmouseleave="evento1()" href="{% url 'habilidades' %}"><img src="/static/img/rayito.svg" alt=""></a>
+                    </li>
+                    <li style="--i:3;"> 
+                        <i class="nav-item2 {% if request.path == '/proyectos/' %}active{% endif %}"></i>
+                        <a class="nav-link2" onmouseenter="evento1()" onmouseleave="evento1()" href="{% url 'proyectos' %}"><img src="/static/img/capacidades.svg" alt=""></a>
+                    </li>
+                    <li style="--i:4;"> 
+                        <i class="nav-item3 {% if request.path == '/recorrido/' %}active{% endif %}"></i>
+                        <a class="nav-link3" onmouseenter="evento3()" onmouseleave="evento1()" href="{% url 'recorrido' %}"><img src="/static/img/recorrido.svg" alt=""></a>
+                    </li>
+                    <li style="--i:5;"> 
+                        <i class="nav-item4 {% if request.path == '/contacto/' %}active{% endif %}"></i>
+                        <a class="nav-link4" onmouseenter="evento4()" onmouseleave="evento1()" href="{% url 'contacto' %}"><img src="/static/img/contacto.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="box">
+            {% block content %}
+                <!--Código que viene de templates-->
+                <strong>Contenido dentro del bloque</strong>
+            {% endblock %}
+        </div>
+
+    </div>
+
+</body>
+
+</html>

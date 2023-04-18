@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <link href="{% static '/css/nav.css' %}" rel="stylesheet" />    
+    <h1 class="title">{{title}}</h1>
+
+    <div class="gallery">
+
+        {% for proyecto in proyectos %}
+
+            <main class="item">
+                <img src="{{proyecto.imagen.url}}">
+            </main>
+
+            <!-- <div><p>
+                <h2>{{proyecto.nombre}}</h2>
+                <P>{{proyecto.link}}</p>
+                <p><img src="{{proyecto.imagen.url}}"></p>
+            </p></div> -->
+
+        {% endfor %}
+
+    </div>
+{% endblock %}

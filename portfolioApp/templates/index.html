@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block title %} {% endblock %}
+
+{% block content %}
+
+    <div class="portada">
+        <div id="presentacion">
+            <h1 class="saludo">
+                Hola! Soy
+            </h1>
+            <h1 class="nombre">
+                Eva
+            </h1>
+            <h1 class="apellido1">
+                Alvarez
+            </h1>
+            <h1 class="apellido2">
+                Lopez
+            </h1>
+        </div>
+
+        <img src="static/img/pers.png" id="foto">
+
+    </div>
+
+    <script>
+        const nav = document.querySelector("nav"),
+            toggleBtn = nav.querySelector(".toggle-btn");
+
+        toggleBtn.addEventListener("click" , () =>{
+            nav.classList.toggle ("open");
+        });
+        
+        function evento(){
+            var imagen = document.getElementById("foto");
+
+            imagen.src = "static/img/pers.png";
+        }
+
+        function evento1(){
+            var imagen = document.getElementById("foto");
+
+            imagen.src = "static/img/pers.png";
+        }
+
+        function evento2(){
+            var imagen = document.getElementById("foto");
+
+            imagen.src = "static/img/phabilidades.png";
+        }
+
+        function evento3(){
+            var imagen = document.getElementById("foto");
+
+            imagen.src = "static/img/precorrido.png";
+        }
+
+        function evento4(){
+          var imagen = document.getElementById("foto");
+
+          imagen.src = "static/img/pcontacto.png";
+      }
+    </script>
+{% endblock %}

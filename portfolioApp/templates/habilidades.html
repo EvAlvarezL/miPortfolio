@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+    <link href="{% static '/css/nav.css' %}" rel="stylesheet" />
+    <h1 class="title">{{title}}</h1>
+
+    <div class="sobremi">
+        <img src="/static/img/yo.jpg" id="yo">
+
+        <div class="texto">
+            <p>
+                Me llamo Eva y vivo en la ciudad de Vigo. Si hay algo que me define es la dedicación y el compromiso. Soy una persona muy detallista.
+            </p>      
+            <p>
+                Me encanta la programación y resolver cualquier tipo de reto. Actualmente estudio ingeniería informática por la UNED. 
+            </p>
+            <p>
+                Echa un vistazo a mis proyectos!! 
+            </p>
+        </div>
+    <div>    
+{% endblock %}

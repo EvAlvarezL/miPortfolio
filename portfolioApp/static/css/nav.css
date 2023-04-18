@@ -1,0 +1,102 @@
+.nav-content .toggle-btn{
+    height: 650px;
+    width: 150px;
+    margin-right: 20px;
+    margin-top: 80px;
+    z-index: 100;
+    cursor: default;
+    opacity: 0;
+}
+
+.nav-content li{
+    position: absolute;
+    transition: all 0.6s ease;
+    opacity: 1;
+}
+
+
+.nav-link{
+    animation-name: mover1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.nav-link1{
+    animation-name: mover2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.nav-link2{
+    animation-name: mover3;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.nav-link3{
+    transform: rotate(180deg);
+    animation-name: mover4;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.nav-link4{
+    transform: rotate(200deg);
+    animation-name: mover5;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes mover1{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50px) translateY(400px) rotate(225deg);
+    }
+}
+
+@keyframes mover2{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-100px) translateY(350px) rotate(225deg);
+    }
+}
+
+@keyframes mover3{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-150px) translateY(300px) rotate(225deg);
+    }
+}
+
+@keyframes mover4{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-200px) translateY(250px) rotate(225deg);
+    }
+}
+
+@keyframes mover5{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-250px) translateY(200px) rotate(225deg);
+    }
+}

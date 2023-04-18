@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+#logotipo img{
+    width: 20%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.title{ 
+    color: #1AC487;
+    font-family: 'Source Code Pro', monospace;
+    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.portada{
+    height: 100%;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 500px;
+    justify-content: center;
+}
+
+@media(max-width: 768px){
+    .portada{
+        flex-direction: column;
+    }
+
+    #content{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    nav{
+        margin-right: 500px;
+        margin-left: 50px;
+    }
+
+    .sobremi{
+        flex-direction: column;
+    }
+
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+#presentacion h1{ 
+    color: #e046d696;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 60px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.saludo{
+    color: black;
+    font-size: 50px;
+}
+
+.nombre{
+    margin-left: 30px;
+}
+
+.apellido1{
+    margin-left: 50px;
+    margin-top: -100px;
+}
+
+.apellido2{
+    margin-left: 50px;
+    margin-top:-100px;
+}
+
+#foto{
+    width: 230px;
+    /*margin-left: 50px;*/
+}
+
+nav{
+    position: absolute;
+    /*top: 380px;*/
+    /*margin-left: 500px;*/
+    margin-top: 100px;
+    /*right: 550px;*/ 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-content ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-content .toggle-btn,
+.nav-content li .nav-link, .nav-link1,
+.nav-link2, .nav-link3, .nav-link4{
+    height: 60px;
+    width: 60px;
+    background: radial-gradient(#ffc1fba2, #e046d696);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.nav-content .toggle-btn{
+    height: 650px;
+    width: 150px;
+    margin-right: 20px;
+    margin-top: 80px;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav-content li{
+    position: absolute;
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+nav.open .nav-content li{
+    transform: rotate(calc(var(--i) * (390deg/9))) translateY(200px);
+    opacity: 1;
+}
+
+nav ul{
+    text-decoration: none;
+    list-style: none;
+    transform: rotate(135deg);
+    margin-left: 100px;
+}
+
+nav img{
+    width: 35px;
+}
+
+@media (min-width: 10px){
+    .nav-link{
+        width: 50%;
+        transform: rotate(180deg);
+    }
+
+    .nav-link1{
+        transform: rotate(120deg);
+    }
+
+    .nav-link2{
+        transform: rotate(90deg);
+    }
+
+    .nav-link3{
+        transform: rotate(50deg);
+    }
+
+    .nav-link4{
+        transform: rotate(5deg);
+    }
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery{
+    width: 85%;
+    max-width: 1200px;
+    margin-left: 400px;
+    margin-top: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 133px);
+    grid-auto-rows: 200px;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.item{
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    grid-column: span 2;
+    height: 283px;
+}
+
+.item:first-of-type{
+    grid-column: 2 / span 2;
+}
+
+nav img{
+    width: 35px;
+}
+
+.contenedorFormulario{
+    background-color: #ffc1fba2;
+    width: 70%;
+    margin: 40px;
+    border-radius: 5px;
+    font-family: 'Source Code Pro', monospace;
+    padding: 10px 0px;
+}
+
+.tableForm{
+    margin: 20px auto;
+}
+
+.button{
+    width:150px;
+    margin-left: 20px;
+}
+
+#yo{
+    min-width: 90px;
+    max-width: 430px;
+    border-radius: 50px;
+    margin-left: 100px;
+}
+
+.texto{
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-top: 150px;
+    font-size: 20px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.sobremi{
+    display: flex;
+    margin-top: -70px;
+}
+
+
+.tecnologias{
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.tecnologias img{
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 100px;
+    border-radius: 10%;
+    margin-left: 20px;
+    }

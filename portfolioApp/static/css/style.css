@@ -1,0 +1,138 @@
+nav{
+    position: absolute;
+    top: 300px;
+    right: 1000px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transform: rotate(135deg);
+
+}
+
+.nav-content .toggle-btn,
+.nav-content li .nav-link{
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.nav-content .toggle-btn{
+    font-size: 15px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+nav ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-content .toggle-btn,
+.nav-content li{
+    position: absolute;
+}
+
+nav.open .nav-content li{
+    transform: rotate(calc(var(--i) * (360deg/8))) translateY(120px);
+}
+
+
+.nav-content li .nav-link{
+    /*transform: rotate(calc(var(--i) * (360deg/ -8))) translateY(120px);*/
+}
+
+/*nav.open .nav-content li{
+    transform: rotate(calc(var(--i) * (360deg/ -8))) translateY(160px);
+    transform: rotate(-45deg);
+
+}*/
+
+
+/*nav.open .nav-link{
+    transform: rotate(calc(var(--i) * (360deg/ -8))) translateY(160px);
+}*/
+
+/*nav ul li{
+    position: absolute;
+    transform: rotate(calc(var(--i) * (360deg/8))) translateY(-160px);
+}*/
+
+@media (min-width: 30px){
+    .nav-link img{
+        width: 100%;
+        transform: rotate(45deg);
+    }
+}
+
+
+/*.nav ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-item1{
+    width:249px;
+    height: 250px;
+    margin-left: 1143px;
+    margin-top: 50px;
+    color: #ffffff;
+    text-decoration: underline;
+    align-content: center;
+    display: ;
+}
+
+.nav-item1:hover{
+    background: url("../img/gorro.png");
+    background-size: 100% 100%;
+
+}
+.nav-item2{
+    margin-left: 1050px;
+    margin-top: 150px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.nav-item3{
+    margin-left: 1200px;
+    margin-top: 280px;
+    margin-bottom: 0px;
+    padding: 0px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.nav-item4{
+    margin-left: px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    color: #ffffff;
+    padding: 0px;
+    text-decoration: underline;
+}*/
+
+body{
+    background: url("../img/fondosims.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+header h1{ 
+    color: rgb(255, 127, 127);
+}
