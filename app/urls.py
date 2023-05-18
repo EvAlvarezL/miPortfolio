@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler404
+from portfolioApp.views import page_not_found404
 
 
 urlpatterns = [
@@ -24,3 +26,5 @@ urlpatterns = [
 
     path('contacto/', include('contacto.urls')),
     ]
+
+handler404 = page_not_found404

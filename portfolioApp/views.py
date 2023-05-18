@@ -25,3 +25,6 @@ def recorrido(request):
     return render(request, 'recorrido.html', {
         'title': 'Recorrido'
     })
+
+def page_not_found404(request, exception):
+    return render('404.html')
